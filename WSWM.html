@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Where Should We Meet?</title>
+<link rel="stylesheet" href="WSWM.css" />
+</head>
+
+<body>
+<h1 id="mainTitle">Where Should We Meet?</h1>
+<p id="instructions">Enter two locations in the text boxes below in latitude/longitude format. The map will then display a circle centered on the ideal meeting location. To convert an address into latitude and longitude coordinates, click <a href="http://www.latlong.net/convert-address-to-lat-long.html">this link.</a></p>
+
+<form id="userInput">
+<div id="container1">
+    <p id="label">Address #1 Coordinates:</p>
+    <input id="inputLat1" type="text" placeholder="Latitude #1" required="required" />
+    <input id="inputLong1" type="text" placeholder="Longitude #1" required="required" />
+</div>
+<div id="container2">
+    <p id="label">Address #2 Coordinates:</p>
+    <input id="inputLat2" type="text" placeholder="Latitude #2" required="required" />
+    <input id="inputLong2" type="text" placeholder="Longitude #2" required="required" />
+</div>
+</form>
+
+<div id="container3">
+    <button id="locationButton" type="button" onclick="useCurrent()">Use Current Location</button>
+</div>
+
+<div id="container4">
+    <button id="submitButton" type="button" onclick="submit()">Submit</button>
+</div>
+
+<div id="outputMap"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="WSWM.js"></script>
+</body>
+</html>
